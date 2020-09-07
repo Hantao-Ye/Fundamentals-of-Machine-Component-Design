@@ -2,7 +2,7 @@
 
 [TOC]
 
-## Material Strength and Stiffness
+## 2-1 Material Strength and Stiffness
 
 ### Formula
 
@@ -19,7 +19,10 @@ $$
 
 These are the graphs of the ductile material and the brittle material
 
-- some notes on slides
+- $pl$: the proportional limit, where we can get the Hooke's law
+    $\sigma = E\epsilon$
+- $el$: the elastic limit, where the further load will cause the plastic deformation
+- 
 
 and Hook's law
 
