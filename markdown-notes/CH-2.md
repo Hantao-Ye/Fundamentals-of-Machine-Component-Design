@@ -185,5 +185,3 @@ Charpy notched-bar test is used to determine brittleness and impact strength
 Specimen struck by pendulum
 
 Energy absorbed: computed from height of swing after fracture
-
-
