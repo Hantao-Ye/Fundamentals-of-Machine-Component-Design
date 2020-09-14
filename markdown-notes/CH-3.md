@@ -16,8 +16,6 @@ A system with zero acceleration is said to be in **equilibrium**, if that system
 
 Free-body diagrams help simplifying the analysis of a very complex structure or machine by successively isolating each element and then studying and analyzing it.
 
-### EX 3.1
-
 ## 3-2 Shear Force and Bending Moments in Beams
 
 ### Definition
@@ -28,10 +26,6 @@ V &= \frac{\mathrm{d}M}{\mathrm{d}x}\\[2ex]
 \frac{\mathrm{d}V}{\mathrm{d}x}&=\frac{\mathrm{d}^2M}{\mathrm{d}x^2}=q
 \end{aligned}
 $$
-
-### EX 3.2
-
-### EX 3.3
 
 ## 3-3 Cartesian Stress Components
 
@@ -52,13 +46,40 @@ $$
 
 ### Principal Stresses for Plane Stress
 
+$$
+\sigma_1, \sigma_2 = \frac{\sigma_x+\sigma_y}{2}\pm\sqrt{(\frac{\sigma_x-\sigma_y}{2})^2+\tau_{xy}^2}
+$$
+
+### Principal Directions
+
+$$
+\tan2\phi_P = \frac{2\tau_{xy}}{\sigma_x-\sigma_y}
+$$
+
 ### Maximum Shear Stress
+
+$$
+\tau_1,\tau_2 = \pm\sqrt{(\frac{\sigma_x-\sigma_y}{2})^2+\tau_{xy}^2}
+$$
 
 ### Mohr's Circle Diagram
 
-### EX 3.4
+<div align = center><img src = "/assets/CH3-1.png"></div>
+
+- center: $\frac{\sigma_x+\sigma_y}{2}$
+- radius: $\sqrt{(\frac{\sigma_x-\sigma_y}{2})^2+\tau_{xy}^2}$
+- $2\phi_P$: $\frac{2\tau_{xy}}{\sigma_x-\sigma_y}$
+- $\phi_S$: $\frac{\pi}{4}-\phi_P$
 
 ## 3-4 General Three-Dimensional Stress
+
+<div align = center><img src = "/assets/CH3-2.png"></div>
+
+where
+
+$$
+\tau_{1/2} = \frac{\sigma_1-\sigma_2}{2}\qquad\tau_{2/3}=\frac{\sigma_2-\sigma_3}{2}\qquad\tau_{1/3}=\frac{\sigma_1-\sigma_3}{2}
+$$
 
 ## 3-5 Elastic Strain
 
@@ -117,15 +138,58 @@ $$
 
 ### Normal Stresses for Beams in Bending
 
-### EX 3-5
+the beam is subjected to pure bending, which means the shear force is zero and that no torsion or axial loads are present
+
+| <img src = "/assets/CH3-3.png"> | <img src = "/assets/CH3-4.png"> |
+| :-----------------------------: | :-----------------------------: |
+
+the bending stress varies linearly with the distance from the neutral axis
+
+$$
+\sigma_x = -\frac{My}{I}
+$$
+
+where $I$ is the second-area moment about the z-axis
+
+$$
+I = \int{y^2\mathrm{d}A}
+$$
+
+and the maximum magnitude of the bending stress will occur where $y$ has the greatest magnitude, where c is the neutral axis
+
+$$
+\sigma_{max} = \frac{Mc}{I}
+$$
 
 ### Two-Plane Bending
 
-### EX 3-6
+cross sections with one or two planes of symmetry only
+
+$$
+\sigma_x = -\frac{M_z y}{I_z}+\frac{M_y z}{I_y}
+$$
+
+for solid circular cross section, the maximum bending stress is
+
+$$
+\sigma_m = \frac{Mc}{I} = \frac{\sqrt{M_y^2+M_z^2}(d/2)}{\pi d^4/64} = \frac{32}{\pi d^3}\sqrt{M_y^2+M_z^2}
+$$
 
 ### Shear Stresses for Beams in Bending
 
-### EX 3-7
+$$
+\tau = \frac{VQ}{Ib}
+$$
+
+where $Q$ is the first moment of the area
+
+$$
+Q = \int_{y_1}^c{y\mathrm{d}A}
+$$
+
+the traverse shear stress in common cross sections 
+<div align = center><img src = "/assets/CH3-5.png"></div>
+
 
 ## 3-6 Torsion
 
@@ -135,6 +199,33 @@ $$
 \theta = \frac{TI}{GJ}
 $$
 
-### EX 3-8
+- $T$: torque
+- $l$: length
+- $G$: modulus of rigidity
+- $J$: polar second moment of area
 
-### EX 3-9
+and shear stresses develop throughout the cross section
+
+$$
+\tau = \frac{T\rho}{J}\qquad \tau_{max} = \frac{Tr}{J}
+$$
+
+where the second polar moment for the solid round section is
+
+$$
+J = \frac{\pi d^4}{32}
+$$
+
+### Power, Speed and Torque
+
+Power equals torque times speed
+
+$$
+H = T\omega
+$$
+
+A convenient conversion with speed in rpm
+
+$$
+T = 9.55\frac{H}{n}
+$$
