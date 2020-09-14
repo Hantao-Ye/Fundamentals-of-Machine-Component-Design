@@ -185,3 +185,17 @@ Charpy notched-bar test is used to determine brittleness and impact strength
 Specimen struck by pendulum
 
 Energy absorbed: computed from height of swing after fracture
+
+## 2-6 Temperature Effects on Strengths
+
+<div align = center><img src = "/assets/CH2-6.png"></div>
+
+- temperature increases above RT
+
+$S_{ut}$ increase slightly then decreases significantly
+
+$S_y$ decreases continuously
+
+- creep: continuous deformation under load for long periods of time at elevated temperatures
+
+<div align = center><img src = "/assets/CH2-7.png"></div>
