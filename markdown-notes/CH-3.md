@@ -193,7 +193,7 @@ the traverse shear stress in common cross sections
 
 ## 3-6 Torsion
 
-### the Round Plane
+### Round Plane
 
 $$
 \theta = \frac{TI}{GJ}
@@ -216,6 +216,20 @@ $$
 J = \frac{\pi d^4}{32}
 $$
 
+### Rectangular Section
+
+- shear stress does not vary linearly with radial distance for rectangular cross section
+- shear stress is zero at the corners
+- maximum shear stress is at the middle of the longest side
+- for rectangular $b\times c$ bar, where $b$ is the longest side
+
+$$
+\begin{aligned}
+    \tau_{max} &= \frac{T}{abc^2} \approx \frac{T}{bc^2}\Big(3+\frac{1.8}{b/c}\Big)\\[2ex]
+    \theta &= \frac{Tl}{\beta bc^3 G}
+\end{aligned}
+$$
+
 ### Power, Speed and Torque
 
 Power equals torque times speed
@@ -228,4 +242,114 @@ A convenient conversion with speed in rpm
 
 $$
 T = 9.55\frac{H}{n}
+$$
+
+## 3-7 Thin-Walled Tubes
+
+for thin-walled tubes, the wall thickness is far less than the tube radius, where shear stress is inversely proportional to wall thickness
+
+### Closed Thin-Walled Tubes
+
+<div align = center><img src = "../assets/CH3-6.png"></div>
+
+$$
+T = \int{\tau t r\mathrm{d}s} = (\tau t)\int{r\mathrm{d}s} = \tau t (2A_m) = 2\tau t A_m
+$$
+
+where the **shear stress** equals to
+
+$$
+\tau = \frac{T}{2A_m t}
+$$
+
+**Angular twist per unit length**
+
+$$
+\theta_1 = \frac{TL_m}{4GA_m^2t}
+$$
+
+### Open Thin-Walled Tubes
+
+- when the median wall line is not closed, the section is said to be an open section
+
+<div align = center><img src = "../assets/CH3-7.png"></div>
+
+- some common open thin-walled sections
+
+$$
+\tau = G\theta_1 c = \frac{3T}{Lc^2}
+$$
+
+## 3-8 Stress Concentration
+
+Since it is quite difficult to design a machine without permitting some changes in the cross sections of the members, a discontinuity in a machine part would alters the stress distribution in the material that the elementary no longer describe the state of stress
+
+A *stress-concentration factor* $K_t$ or $K_{ts}$ is used to relate the actual stress at the discontinuity to the **nominal stress**, which is defined by the following equations
+
+$$
+K_t = \frac{\sigma_{max}}{\sigma_0}\qquad K_{ts} = \frac{\tau_{max}}{\tau_0}
+$$
+
+## 3-9 Contact Stresses
+
+When two bodies having curved surfaces are pressed together, point or line contact changes to area contact, and the stresses developed in the two bodies are three dimensional.
+
+### Spherical Contact
+
+<div align = center><img src = "../assets/CH3-8.png"></div>
+
+the radius $a$ of the circular contact ares is given by the equation
+
+$$
+a = \sqrt[3]{\frac{3F}{8}\frac{(1-\mu_1^2)/E_1+(1-\mu_2^2)}{1/d_1+1/d_2}}
+$$
+
+where the maximum pressure occurs at the center of the contact area and is
+
+$$
+p_{max} = \frac{3F}{2\pi a^2}
+$$
+
+where the maximum stress is put on the z axis
+
+$$
+\sigma_1 = \sigma_2 = \sigma_x = \sigma_y = -p_{max}\Bigg[\Big(1-\Big|\frac{z}{a}\Big|\tan^{-1}\frac{1}{|z/a|}\Big)(1+\nu)-\frac{1}{2\Big(1+\frac{z^2}{a^2}\Big)}\Bigg]
+$$
+
+and 
+
+$$
+\sigma_3=\sigma_z = -\frac{p_{max}}{1+\frac{z^2}{a^2}}
+$$
+
+while for the principle torsion
+
+$$
+\tau_{max} = \tau_{1/3} = \tau_{2/3} = \frac{\sigma_1-\sigma_3}{2}= \frac{\sigma_2-\sigma_3}{2}
+$$
+
+### Cylindrical Contact
+
+for the cylindrical contacting parts, the equation is similar
+
+$$
+b = \sqrt{\frac{2F}{\pi l}\frac{(1-\nu_1^2)/E_1+(1-\nu_2^2)/E_2}{1/d_1+1/d_2}}
+$$
+
+then the maximum pressure is
+
+$$
+p_{max} = \frac{2F}{\pi bl}
+$$
+
+<div align = center><img src = "../assets/CH3-9.png"></div>
+
+where 
+
+$$
+\begin{aligned}
+    \sigma_x &= -2\nu p_{max}\Big(\sqrt{1+\frac{z^2}{b^2}}-\Big|\frac{z}{b}\Big|\Big)\\[2ex]
+    \sigma_y &= -p_{max}\Bigg(\frac{1+2\frac{z^2}{b^2}}{\sqrt{1+\frac{z^2}{b^2}}}-2\Big|\frac{z}{b}\Big|\Bigg)\\[2ex]
+    \sigma_3 &= \sigma_z = -\frac{p_{max}}{\sqrt{1+z^2/b^2}}
+\end{aligned}
 $$
